@@ -37,6 +37,9 @@ include_once "koneksi.php";
                                         <td><?= $data['kategori']; ?></td>
                                         <td>
                                             <!-- Tombol aksi -->
+                                             <a href="?page=kategori_ubah&id=<?= $data['id_kategori']; ?>" class="btn btn-sm btn-info">Ubah</a>
+
+                                             <a href="?page=kategori_hapus&id=<?= $data['id_kategori']; ?>" onclick="return confirm('Hapus data ini?')" class="btn btn-sm btn-danger">Hapus</a>
                                         </td>
                                     </tr>
                                     <?php endwhile; ?>
