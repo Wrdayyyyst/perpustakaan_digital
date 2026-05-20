@@ -5,8 +5,6 @@ if (!isset($_SESSION["user"])) {
     header('location:login.php');
 }
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,12 +75,11 @@ if (!isset($_SESSION["user"])) {
                 ?>
             </li>
             <li class="nav-item">
-                <a class="nav-link collapsed" href="index.php?page=kategori" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fa-solid fa-layer-group"></i>
-                    <span>Kategori</span>
-                </a>
-            </li>
+    <a class="nav-link" href="index.php?page=kategori">
+        <i class="fas fa-fw fa-folder"></i>
+        <span>Kategori</span>
+    </a>
+</li>
         <?php endif; ?>
         <li class="nav-item">
             <a class="nav-link collapsed" href="index.php?page=buku" data-toggle="collapse" data-target="#collapseTwo"
@@ -101,7 +98,7 @@ if (!isset($_SESSION["user"])) {
         <li class="nav-item">
             <a class="nav-link collapsed" href="index.php?page=ulasan" data-toggle="collapse" data-target="#collapseTwo"
                 aria-expanded="true" aria-controls="collapseTwo">
-                <i class="fas fa-fw fa-cog"></i>
+               <i class="fa-solid fa-users fa-2x"></i>
                 <span>Ulasan</span>
             </a>
             <!-- <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -128,7 +125,7 @@ if (!isset($_SESSION["user"])) {
                     </div> -->
         </li>
 
-
+        
 
         <!-- Divider -->
         <!-- <hr class="sidebar-divider d-none d-md-block"> -->

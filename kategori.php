@@ -7,13 +7,13 @@ include_once "koneksi.php";
                     <h1 class="h3 mb-2 text-gray-800">Kategori</h1>
                     <div class="row mb-3">
                         <div class="col-md-12">
-                            <a href="?page+kategori_tambah" class="btn btn-primary">Tambah Kategori</a>
+                            <a href="?page=kategori_tambah" class="btn btn-primary">Tambah Kategori</a>
                         </div>
                     </div>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Tabel Kategori</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -38,6 +38,7 @@ include_once "koneksi.php";
                                         <td>
                                             <!-- Tombol aksi -->
                                              <a href="?page=kategori_ubah&id=<?= $data['id_kategori']; ?>" class="btn btn-sm btn-info">Ubah</a>
+                                             
                                              <a href="?page=kategori_hapus&id=<?= $data['id_kategori']; ?>" onclick="return confirm('Hapus data ini?')" class="btn btn-sm btn-danger">Hapus</a>
                                         </td>
                                     </tr>

@@ -73,7 +73,7 @@
                                 <div class="row no-gutters align-items-center">
                                     <div class="col-auto">
                                         <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?= mysqli_num_rows(mysqli_query($koneksi, 'SELECT*FROM ulasan')); ?></div>
-                                    </div>
+                                    </div>                                                      
                                     <div class="col">
                                         <div class="progress progress-sm mr-2">
                                             <div class="progress-bar bg-info" role="progressbar"
@@ -134,16 +134,19 @@
                                 <td width="150"><strong>Nama</strong></td>
                                 <td width="1">:</td>
                                 <td width="200"><?= $_SESSION['user']['nama']; ?></td>
+                                            
                             </tr>
                             <tr>
                                 <td width="150"><strong>Level User</strong></td>
                                 <td width="1">:</td>
                                 <td width="200"><?= $_SESSION['user']['level']; ?></td>
+                                
                             </tr>
                             <tr>
                                 <td width="150"><strong>Tanggal Login</strong></td>
                                 <td width="1">:</td>
                                 <td width="200"><?= date('d-m-y'); ?></td>
+                                                
                             </tr>
 
 

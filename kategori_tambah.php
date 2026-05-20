@@ -1,0 +1,36 @@
+<div class="container-fluid">
+        <!-- Page Heading -->
+        <h1 class="h3 mb-2 text-gray-800">Tambah Kategori</h1>
+        <div class="card shadow mb-3">
+            <div class="card-body">
+                <?php
+                if(isset($_POST['submit'])) {
+                    $kategori = $_POST['kategori'];
+                    $query = mysqli_query($koneksi, "INSERT INTO kategori(kategori) VALUES('$kategori')");
+                    if($query) {
+                        echo '<script>alert("Tambah data berhasil."); location.href="?page=kategori";</script>';
+                    } else {
+                        echo '<script>alert("Tambah data gagal.");</script>';
+                    }
+                }
+            ?>
+                <form method="POST">
+                <div class="row mb-3">
+                    <div class="col-md-2">Nama Kategori</div>
+                    <div class="col-md-3">
+                        <input type="text" name="kategori" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-10">
+                        <button type="submit" class="btn btn-primary" name="submit" value="submit">Simpan</button>
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                        <a href="?page=kategori" class="btn btn-danger">Kembali</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

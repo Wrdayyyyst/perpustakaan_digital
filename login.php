@@ -52,7 +52,7 @@ include "koneksi.php";
                                     //jika tombol ditekan
                                     if (isset($_POST['login'])) {
                                         //mangambil inputan  
-                                        $username = $_POST['username'];
+                                        $username = $_POST['username'];                                                 
                                         $password = md5($_POST['password']);
 
                                         $data = mysqli_query($koneksi, "SELECT * FROM user
